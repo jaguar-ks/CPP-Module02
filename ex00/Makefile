@@ -5,40 +5,47 @@
 #                                                     +:+ +:+         +:+      #
 #    By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/20 04:57:58 by faksouss          #+#    #+#              #
-#    Updated: 2023/07/20 05:01:02 by faksouss         ###   ########.fr        #
+#    Created: 2023/09/04 10:31:17 by faksouss          #+#    #+#              #
+#    Updated: 2023/09/04 11:59:53 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Fixed.cpp main.cpp
+SRC = main.cpp Fixed.cpp
 
-OBJDIR = obj
+HDR = Fixed.hpp
 
-OBJ = $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
+OBJ_DIR = obj
 
-HEADERS = Fixed.hpp
+SRC_DIR = src
 
-NAME = fixed
+FLG = -Wall -Wextra -Werror -std=c++98
 
-FLG = -Wall -Wextra -Werror
+OBJ =  $(SRC:.cpp=.o)
 
-all: $(NAME)
+INC = -I .
 
-$(NAME): $(OBJ)
-	c++ $(FLG) $(OBJ) -I. -o $(NAME)
+NAME = Fixed
 
-$(OBJDIR)/%.o: src/%.cpp $(HEADERS)
-	@mkdir -p $(OBJDIR)
-	c++ $(FLG) -c -I. $< -o $@
+# x : 
+# 	echo $(OBJ)
+all : $(NAME)
 
-clean:
-	rm -rf $(OBJDIR)
+$(NAME) : $(OBJ)
+	echo $@ $^
+	c++ $(FLG) $^ -o $@
 
-fclean: clean
-	rm -f $(NAME)
+%.o : $(SRC_DIR)/%.c $(HDR)
+	mkdir -p $(OBJ_DIR)
+	c++ $(FLG) -c $(INC) $< -o $@
 
-re: fclean all
+clean :
+	rm -rf obj
 
-.PHONY: all clean fclean re
+fclean : clean
+	rm -rf $(NAME)
 
-.SILENT: $(OBJ) all $(NAME) clean fclean re
+re : fclean all
+
+.PHONY : all fclean clean re
+
+.SILENT : all $(NAME) clean fclean re $(OBJ) x

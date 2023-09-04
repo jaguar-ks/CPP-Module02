@@ -1,17 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
+/*   Updated: 2023/09/04 11:32:03 by faksouss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 
-#include<string>
 #include<iostream>
+#include<cmath>
 
 class Fixed {
     private:
-        int f_p;
-        static const int bits = 8;
+        int fp;
+        static const int fb = 8;
     public:
         Fixed();
-        Fixed(const Fixed &fix);
-        Fixed &operator=(const Fixed &fix);
-        ~Fixed();
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
+        Fixed(const Fixed &obj);
+        
 };
