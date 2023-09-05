@@ -2,6 +2,7 @@
 
 ## new conceptes:
 1. [Orthodox Canonical class form](#orthodox-canonical-class-form)
+1. [Overloading operators](#overloading-operators)
 
 ---
 
@@ -25,3 +26,10 @@ In object-oriented programming, the term "Class in Orthodox Canonical Form" refe
 
 By following these guidelines, classes can be designed in a more modular, maintainable, and extensible manner, leading to code that is easier to understand, modify, and reuse. Applying the Orthodox Canonical Form principles can contribute to creating a well-structured and robust codebase.
 
+---
+## **Overloading operators**
+
+You can redefine or overload the function of most built-in operators in C++. These operators can be overloaded globally or on a class-by-class basis. Overloaded operators are implemented as functions and can be member functions or global functions.
+
+can overload any of the following operators:
+![overloadable-operators](https://miro.medium.com/v2/resize:fit:942/format:webp/1*m20PRnRecz89iJAyvcvrMg.png)
