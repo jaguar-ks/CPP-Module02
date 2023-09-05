@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 10:31:17 by faksouss          #+#    #+#              #
-#    Updated: 2023/09/04 11:59:53 by faksouss         ###   ########.fr        #
+#    Updated: 2023/09/05 10:07:33 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC_DIR = src
 
 FLG = -Wall -Wextra -Werror -std=c++98
 
-OBJ =  $(SRC:.cpp=.o)
+OBJ =  $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
 INC = -I .
 
@@ -31,10 +31,10 @@ NAME = Fixed
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	echo $@ $^
+	# echo $@ $^
 	c++ $(FLG) $^ -o $@
 
-%.o : $(SRC_DIR)/%.c $(HDR)
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp $(HDR)
 	mkdir -p $(OBJ_DIR)
 	c++ $(FLG) -c $(INC) $< -o $@
 
