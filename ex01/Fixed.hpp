@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 05:37:20 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/06 05:46:06 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,4 @@ class Fixed {
         float toFloat( void ) const; // convert the fixed point to floating point
 };
 
-std::ostream &operator<<( std::ostream const &out, Fixed const &obj );
+std::ostream &operator<<( std::ostream &_out, Fixed const &obj );

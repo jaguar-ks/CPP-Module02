@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:56:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 05:41:19 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/06 05:46:17 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ int Fixed::toInt( void ) const{
 
 /********[INSERT OPERATOR OVERLOAD (<<)]*******/
 std::ostream &operator<<( std::ostream &_out, Fixed const &obj ){
-    return (_out << obj.toFloat());
+    return _out << obj.toFloat();
 }
