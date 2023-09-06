@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:56:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 05:50:05 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/06 13:46:43 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,10 @@ Fixed::Fixed( void ){
 }
 
 /********[COPY ASSIGNMENT OPERATOR OVERLOAD (=)]*******/
-Fixed &Fixed::operator=(Fixed const &obj){
+Fixed &Fixed::operator=( Fixed const &obj ){
     std::cout << "Copy assigment operator called" << std::endl;
-    if (this != &obj)
-        return *this;
-    else{
-        Fixed &t = obj;
-        return t;
-    }
+    this->fp = obj.getRawBits();
+    return *this;
 }
 
 /********[DESTRUCTOR]*******/
