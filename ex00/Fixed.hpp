@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/05 10:12:31 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/06 13:49:22 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Fixed {
         static const int fb = 8;
     public:
         Fixed();
-        Fixed(Fixed &obj);
-        Fixed &operator=(Fixed &obj);
+        Fixed(Fixed const &obj);
+        Fixed &operator=(Fixed const &obj);
         ~Fixed();
         int getRawBits ( void ) const;
         void setRawBits( int const raw );
