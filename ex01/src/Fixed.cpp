@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:56:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 05:46:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/06 05:50:05 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ Fixed &Fixed::operator=(Fixed const &obj){
     std::cout << "Copy assigment operator called" << std::endl;
     if (this != &obj)
         return *this;
-    else
-        return (Fixed &)(obj.fp);
+    else{
+        Fixed &t = obj;
+        return t;
+    }
 }
 
 /********[DESTRUCTOR]*******/
@@ -58,12 +60,12 @@ Fixed::Fixed( int const nb ){
 /********[FLOAT CONSTRUCTOR]*******/
 Fixed::Fixed( float const nb ){
     std::cout << "Float Constructor is called" << std::endl;
-    this->fp = roundf(nb * (1 << this->fb));
+    this->fp = roundf((float)nb * (1 << this->fb));
 }
 
 /********[CONVEERTE TO FLOAT]*******/
 float Fixed::toFloat( void ) const{
-    return (this->fp / (1 << this->fb));
+    return ((float)this->fp / (1 << this->fb));
 }
 
 /********[CONVEERTE TO int]*******/
