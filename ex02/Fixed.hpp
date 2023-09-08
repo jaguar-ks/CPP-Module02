@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/08 06:13:04 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 07:24:43 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class Fixed {
         Fixed &operator*( Fixed const &a );
         Fixed &operator/( Fixed const &a );
         Fixed &operator++(void);
+        Fixed &operator++(int);
 };
 
 std::ostream &operator<<( std::ostream &_out, Fixed const &obj );

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:56:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/08 06:12:54 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 07:24:36 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,11 @@ Fixed &Fixed::operator/( Fixed const &a ){
 
 Fixed &Fixed::operator++(void){
     this->fp+=1;
+    return *this;
+}
+
+Fixed &Fixed::operator++(int){
+    this->fp += 1;
     return *this;
 }
 
