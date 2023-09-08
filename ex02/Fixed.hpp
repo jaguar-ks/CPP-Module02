@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/08 07:24:43 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 07:29:33 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ class Fixed {
         bool operator<=( Fixed const &a ); // overloading less than or equale operator (>=)
         bool operator==( Fixed const &a ); // overloading equale operator (==)
         bool operator!=( Fixed const &a ); // overloading equale operator (==)
-        Fixed &operator+( Fixed const &a );
-        Fixed &operator-( Fixed const &a );
-        Fixed &operator*( Fixed const &a );
-        Fixed &operator/( Fixed const &a );
-        Fixed &operator++(void);
-        Fixed &operator++(int);
+        Fixed &operator+( Fixed const &a ); // overloading plus operator (+)
+        Fixed &operator-( Fixed const &a ); // overloading minus operator (-)
+        Fixed &operator*( Fixed const &a ); // overloading multiplication operator (*)
+        Fixed &operator/( Fixed const &a ); // overloading division operator (/)
+        Fixed &operator++(void); // overloading pre-increment operator (++x)
+        Fixed &operator++(int); // overloading post-increment operator (x++)
 };
 
 std::ostream &operator<<( std::ostream &_out, Fixed const &obj );
