@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:56:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/08 07:50:47 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 20:52:12 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,27 +76,27 @@ std::ostream &operator<<( std::ostream &_out, Fixed const &obj ){
 
 /********[COPERATION OPERATORS OVERLOAD( > | < | >= | <= | == | != )]*******/
 
-bool Fixed::operator>(Fixed const &a){
+bool Fixed::operator>(Fixed const &a) const {
     return this->fp > a.fp;
 }
 
-bool Fixed::operator<(Fixed const &a){
+bool Fixed::operator<(Fixed const &a) const {
     return this->fp < a.fp;
 }
 
-bool Fixed::operator>=(Fixed const &a){
+bool Fixed::operator>=(Fixed const &a) const {
     return this->fp >= a.fp;
 }
 
-bool Fixed::operator<=(Fixed const &a){
+bool Fixed::operator<=(Fixed const &a) const {
     return this->fp <= a.fp;
 }
 
-bool Fixed::operator==(Fixed const &a){
+bool Fixed::operator==(Fixed const &a) const {
     return this->fp == a.fp;
 }
 
-bool Fixed::operator!=(Fixed const &a){
+bool Fixed::operator!=(Fixed const &a) const {
     return this->fp != a.fp;
 }
 
@@ -150,3 +150,28 @@ Fixed Fixed::operator--(int){
     return tmp;
 }
 
+/********[MIN MAX OVERLOAD]*******/
+
+Fixed &Fixed::min(Fixed &obj1, Fixed &obj2){
+    if (obj1 < obj2)
+        return obj1;
+    return obj2;
+}
+
+Fixed &Fixed::max(Fixed &obj1, Fixed &obj2){
+    if (obj1 > obj2)
+        return obj1;
+    return obj2;
+}
+
+Fixed const &Fixed::min(Fixed const &obj1, Fixed const &obj2){
+    if (obj1 < obj2)
+        return obj1;
+    return obj2;
+}
+
+Fixed const &Fixed::max(Fixed const &obj1, Fixed const &obj2){
+    if (obj1 > obj2)
+        return obj1;
+    return obj2;
+}

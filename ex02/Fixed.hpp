@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/08 07:50:31 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 20:51:47 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ class Fixed {
         void setRawBits( int const raw ); // edit the fixed point
         int toInt( void ) const; // convert the fixed point to intger
         float toFloat( void ) const; // convert the fixed point to floating point
-        bool operator>( Fixed const &a ); // overloading greater than operator (>)
-        bool operator<( Fixed const &a ); // overloading less than operator (>)
-        bool operator>=( Fixed const &a ); // overloading greater than or equale operator (>=)
-        bool operator<=( Fixed const &a ); // overloading less than or equale operator (>=)
-        bool operator==( Fixed const &a ); // overloading equale operator (==)
-        bool operator!=( Fixed const &a ); // overloading equale operator (==)
+        bool operator>( Fixed const &a ) const; // overloading greater than operator (>)
+        bool operator<( Fixed const &a ) const; // overloading less than operator (>)
+        bool operator>=( Fixed const &a ) const; // overloading greater than or equale operator (>=)
+        bool operator<=( Fixed const &a ) const; // overloading less than or equale operator (>=)
+        bool operator==( Fixed const &a ) const; // overloading equale operator (==)
+        bool operator!=( Fixed const &a ) const; // overloading equale operator (==)
         Fixed &operator+( Fixed const &a ); // overloading plus operator (+)
         Fixed &operator-( Fixed const &a ); // overloading minus operator (-)
         Fixed &operator*( Fixed const &a ); // overloading multiplication operator (*)
@@ -44,6 +44,10 @@ class Fixed {
         Fixed operator++(int); // overloading post-increment operator (x++)
         Fixed &operator--(void); // overloading pre-increment operator (++x)
         Fixed operator--(int); // overloading post-increment operator (x++)
+        static Fixed &min(Fixed &obj1, Fixed &obj2);
+        static Fixed &max(Fixed &obj1, Fixed &obj2);
+        static Fixed const &min(Fixed const &obj1, Fixed const &obj2);
+        static Fixed const &max(Fixed const &obj1, Fixed const &obj2);
 };
 
 std::ostream &operator<<( std::ostream &_out, Fixed const &obj );
