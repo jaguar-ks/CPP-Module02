@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:56:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 14:46:24 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 06:12:54 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Fixed::Fixed( void ){
 
 /********[COPY ASSIGNMENT OPERATOR OVERLOAD (=)]*******/
 Fixed &Fixed::operator=( Fixed const &obj ){
-    std::cout << "Copy assigment operator called" << std::endl;
-    this->fp = obj.getRawBits();
+    std::cout << "Copy assigment operator called" << obj.toFloat() << std::endl;
+    this->fp = obj.fp;
     return *this;
 }
 
@@ -56,7 +56,7 @@ Fixed::Fixed( int const nb ){
 /********[FLOAT CONSTRUCTOR]*******/
 Fixed::Fixed( float const nb ){
     std::cout << "Float Constructor is called" << std::endl;
-    this->fp = roundf((float)nb * (1 << this->fb));
+    this->fp = roundf(nb * (1 << this->fb));
 }
 
 /********[CONVEERTE TO FLOAT]*******/
@@ -76,26 +76,58 @@ std::ostream &operator<<( std::ostream &_out, Fixed const &obj ){
 
 /********[COPERATION OPERATORS OVERLOAD( > | < | >= | <= | == | != )]*******/
 
-bool Fixed::operator>(Fixed &a){
-    return this->getRawBits() > a.getRawBits();
+bool Fixed::operator>(Fixed const &a){
+    return this->fp > a.fp;
 }
 
-bool Fixed::operator<(Fixed &a){
-    return this->getRawBits() < a.getRawBits();
+bool Fixed::operator<(Fixed const &a){
+    return this->fp < a.fp;
 }
 
-bool Fixed::operator>=(Fixed &a){
-    return this->getRawBits() >= a.getRawBits();
+bool Fixed::operator>=(Fixed const &a){
+    return this->fp >= a.fp;
 }
 
-bool Fixed::operator<=(Fixed &a){
-    return this->getRawBits() <= a.getRawBits();
+bool Fixed::operator<=(Fixed const &a){
+    return this->fp <= a.fp;
 }
 
-bool Fixed::operator==(Fixed &a){
-    return this->getRawBits() == a.getRawBits();
+bool Fixed::operator==(Fixed const &a){
+    return this->fp == a.fp;
 }
 
-bool Fixed::operator!=(Fixed &a){
-    return this->getRawBits() != a.getRawBits();
+bool Fixed::operator!=(Fixed const &a){
+    return this->fp != a.fp;
 }
+
+/********[ARETHMETIC OPERATORS OVERLOAD( + | - | / | *)]*******/
+
+Fixed &Fixed::operator+( Fixed const &a ){
+    float n = this->toFloat() + a.toFloat();
+    this->fp = roundf(n * (1 << this->fb));
+    return *this;
+}
+
+Fixed &Fixed::operator*( Fixed const &a ){
+    float n = this->toFloat() * a.toFloat();
+    this->fp = roundf(n * (1 << this->fb));
+    return *this;
+}
+
+Fixed &Fixed::operator-( Fixed const &a ){
+    float n = this->toFloat() - a.toFloat();
+    this->fp = roundf(n * (1 << this->fb));
+    return *this;
+}
+
+Fixed &Fixed::operator/( Fixed const &a ){
+    float n = this->toFloat() / a.toFloat();
+    this->fp = roundf(n * (1 << this->fb));
+    return *this;
+}
+
+Fixed &Fixed::operator++(void){
+    this->fp+=1;
+    return *this;
+}
+

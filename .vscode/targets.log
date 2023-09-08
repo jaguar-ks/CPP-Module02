@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue Sep  5 23:23:13 2023
+# Make data base, printed on Fri Sep  8 07:13:02 2023
 
 # Variables
 
@@ -35,23 +35,17 @@ _ = /usr/bin/make
 # makefile
 MAKEFILE_LIST := 
 # environment
-P9K_SSH = 0
-# environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Apple/usr/bin
+PATH = /usr/bin:/bin:/usr/sbin:/sbin
 # environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-LaunchInstanceID = AFCC62BA-45D5-430D-86ED-8684B476A354
+LaunchInstanceID = C5B35879-313E-474F-917A-7ECBB3D15AB1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-LS_COLORS = di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43
-# environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.v0EeKfFH8a/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.VzrkPgvJKO/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -71,8 +65,6 @@ LOGNAME = faksouss
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-ZSH = /Users/faksouss/.oh-my-zsh
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
@@ -90,8 +82,6 @@ MAKE_VERSION := 3.81
 USER = faksouss
 # makefile
 .DEFAULT_GOAL := 
-# environment
-LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -113,7 +103,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000003.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -126,8 +116,6 @@ COMMAND_MODE = unix2003
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# environment
-PAGER = less
 # environment
 LC_ALL = C
 # environment
@@ -143,9 +131,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 96104
+VSCODE_PID = 97762
 # variable set hash-table stats:
-# Load=66/1024=6%, Rehash=0, Collisions=1/87=1%
+# Load=60/1024=6%, Rehash=0, Collisions=1/81=1%
 
 # Pattern-specific Variable Values
 
@@ -227,7 +215,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue Sep  5 23:23:13 2023
+# Finished Make data base on Fri Sep  8 07:13:02 2023
 
  
 make: *** No rule to make target `all'.  Stop.

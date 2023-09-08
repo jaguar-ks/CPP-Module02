@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 11:36:32 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 13:55:34 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 06:11:43 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int main(){
     std::cout << a++ << std::endl;
     std::cout << a << std::endl;
     std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
+    // std::cout << Fixed::max( a, b ) << std::endl;
     return 0;
 }

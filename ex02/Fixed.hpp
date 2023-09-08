@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:32:11 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/06 14:45:52 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/08 06:13:04 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,17 @@ class Fixed {
         void setRawBits( int const raw ); // edit the fixed point
         int toInt( void ) const; // convert the fixed point to intger
         float toFloat( void ) const; // convert the fixed point to floating point
-        bool operator>( Fixed &a ); // overloading greater than operator (>)
-        bool operator<( Fixed &a ); // overloading less than operator (>)
-        bool operator>=( Fixed &a ); // overloading greater than or equale operator (>=)
-        bool operator<=( Fixed &a ); // overloading less than or equale operator (>=)
-        bool operator==( Fixed &a ); // overloading equale operator (==)
-        bool operator!=( Fixed &a ); // overloading equale operator (==)
+        bool operator>( Fixed const &a ); // overloading greater than operator (>)
+        bool operator<( Fixed const &a ); // overloading less than operator (>)
+        bool operator>=( Fixed const &a ); // overloading greater than or equale operator (>=)
+        bool operator<=( Fixed const &a ); // overloading less than or equale operator (>=)
+        bool operator==( Fixed const &a ); // overloading equale operator (==)
+        bool operator!=( Fixed const &a ); // overloading equale operator (==)
+        Fixed &operator+( Fixed const &a );
+        Fixed &operator-( Fixed const &a );
+        Fixed &operator*( Fixed const &a );
+        Fixed &operator/( Fixed const &a );
+        Fixed &operator++(void);
 };
 
 std::ostream &operator<<( std::ostream &_out, Fixed const &obj );
