@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:54:27 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/13 05:46:16 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/14 00:32:17 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 class Point{
     private:
-        Fixed x;
-        Fixed y;
+        const Fixed x;
+        const Fixed y;
     public:
         Point( void );
         Point( Point const &point );
