@@ -6,11 +6,11 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:51:57 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/10 22:52:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/13 05:38:44 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Fixed.hpp"
+#include"../inc/Fixed.hpp"
 /********[DEFAULT CONSTRUCTOR]*******/
 Fixed::Fixed( void ){
     // std::cout << "Default Constructor called" << std::endl;
@@ -20,7 +20,7 @@ Fixed::Fixed( void ){
 /********[COPY ASSIGNMENT OPERATOR OVERLOAD (=)]*******/
 Fixed &Fixed::operator=( Fixed const &obj ){
     // std::cout << "Copy assigment operator called" << obj.toFloat() << std::endl;
-    this->fp = obj.fp;
+    this->setRawBits(obj.getRawBits());
     return *this;
 }
 

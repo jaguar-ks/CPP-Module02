@@ -6,11 +6,11 @@
 #    By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/10 22:52:33 by faksouss          #+#    #+#              #
-#    Updated: 2023/09/10 22:53:57 by faksouss         ###   ########.fr        #
+#    Updated: 2023/09/13 03:29:11 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp Fixed.cpp Point.cpp
 
 HDR = inc/Fixed.hpp inc/Point.hpp
 
