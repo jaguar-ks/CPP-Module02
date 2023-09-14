@@ -1,6 +1,6 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/faksouss/Desktop/cpp/day02'
-make: Leaving directory `/Users/faksouss/Desktop/cpp/day02'
+make: Entering directory '/home/jaguar/42_cursus/CPP-Module02'
+make: Leaving directory '/home/jaguar/42_cursus/CPP-Module02'
  
 make: *** No targets specified and no makefile found.  Stop.
 
