@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:54:27 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/14 00:32:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/14 01:08:41 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,13 @@ class Point{
         const Fixed x;
         const Fixed y;
     public:
-        Point( void );
-        Point( Point const &point );
-        Point( const float x, const float y );
-        ~Point( void );
-        Point &operator=(Point const &point);
-        void setX(Fixed const &x);
-        void setY(Fixed const &y);
-        Fixed const getX() const ;
-        Fixed const getY() const ;
+        Point( void ); //Default Constructor
+        Point( Point const &point ); //Copy Constructor
+        Point( const float x, const float y ); //Float arguments COnstructor
+        ~Point( void ); //Destructor
+        Point &operator=(Point const &point); //Copy assighment overload
+        Fixed const getX() const ; //Return the X attribute
+        Fixed const getY() const ; //Return the Y attribute
 
 };
 
