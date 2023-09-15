@@ -6,56 +6,48 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:51:57 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/15 01:03:00 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/15 02:33:19 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/Fixed.hpp"
 /********[DEFAULT CONSTRUCTOR]*******/
 Fixed::Fixed( void ){
-    // std::cout << "Default Constructor called" << std::endl;
     this->fp = 0;
 }
 
 /********[COPY ASSIGNMENT OPERATOR OVERLOAD (=)]*******/
 Fixed &Fixed::operator=( Fixed const &obj ){
-    // std::cout << "Copy assigment operator called" << obj.toFloat() << std::endl;
     this->setRawBits(obj.getRawBits());
     return *this;
 }
 
 /********[DESTRUCTOR]*******/
 Fixed::~Fixed( void ){
-    // std::cout << "Destructor is called" << std::endl;
 }
 
 /********[GET FIXED POINT]*******/
 int Fixed::getRawBits( void ) const{
-    // std::cout << "getRawBits member function is called" << std::endl;
     return (this->fp);
 }
 
 /********[SET FIXED POINT]*******/
 void Fixed::setRawBits( int const raw){
-    // std::cout << "setRawBits member function is called" << std::endl;
     this->fp = raw;
 }
 
 /********[COPY CONSTRUCTOR]*******/
 Fixed::Fixed( Fixed const &obj ){
-    // std::cout << "Copy Constructor called" << std::endl;
     *this = obj;
 }
 
 /********[INT CONSTRUCTOR]*******/
 Fixed::Fixed( int const nb ){
-    // std::cout << "Int Constructor is called" << std::endl;
     this->fp = nb << this->fb;
 }
 
 /********[FLOAT CONSTRUCTOR]*******/
 Fixed::Fixed( float const nb ){
-    // std::cout << "Float Constructor is called" << std::endl;
     this->fp = roundf(nb * (1 << this->fb));
 }
 
