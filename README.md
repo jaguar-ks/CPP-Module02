@@ -36,5 +36,6 @@ You can redefine or overload the function of most built-in operators in C++. The
 can overload any of the following operators:
 ![overloadable-operators](https://miro.medium.com/v2/resize:fit:942/format:webp/1*m20PRnRecz89iJAyvcvrMg.png)
 
+---
 ## **Final mark**
 ![final-mark](final_mark.png)
