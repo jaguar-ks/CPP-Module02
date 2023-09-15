@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:51:57 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/14 18:47:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/15 01:03:00 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ Fixed::Fixed( float const nb ){
 
 /********[CONVEERTE TO FLOAT]*******/
 float Fixed::toFloat( void ) const{
-    return (roundf((float)this->fp / (1 << this->fb)));
+    return ((float)this->fp / (1 << this->fb));
 }
 
 /********[CONVEERTE TO int]*******/
